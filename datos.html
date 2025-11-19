@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Datos Personales</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="datos.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Formulario de Datos Personales</h1>
+    <img src="datos.jpg" alt="Imagen datos" class="animacion">
+
+    <form id="datosForm">
+      <label for="ci">CI:</label>
+      <input type="text" id="ci" name="ci" required>
+
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" required>
+
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" name="direccion">
+
+      <label for="sexo">Sexo:</label>
+      <select id="sexo" name="sexo">
+        <option>Masculino</option>
+        <option>Femenino</option>
+        <option>Otro</option>
+      </select>
+
+      <label for="ciudad">Ciudad:</label>
+      <input type="text" id="ciudad" name="ciudad">
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono">
+
+      <label for="fecha">Fecha de nacimiento:</label>
+      <input type="date" id="fecha" name="fecha">
+
+      <label for="correo">Correo:</label>
+      <input type="email" id="correo" name="correo">
+
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="status-message"></p>
+
+    <div class="botones">
+      <a href="index.html"><button>Inicio</button></a>
+      <a href="encuesta.html"><button>Formulario de Encuesta</button></a>
+    </div>
+  </div>
+</body>
+</html>
