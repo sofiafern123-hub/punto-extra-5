@@ -1,71 +1,132 @@
+/* Fondo general con degradado animado */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #eef2f3;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(270deg, #0078d7, #00c6ff, #0078d7);
+  background-size: 600% 600%;
+  animation: gradientBG 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   margin: 0;
-  padding: 0;
-  text-align: center;
 }
 
-.container {
-  margin: 30px auto;
-  width: 80%;
-  max-width: 600px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+/* Animación del fondo */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Contenedor del formulario */
+.form-container, .container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  width: 400px;
+  animation: fadeInUp 1s ease;
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 h1 {
+  text-align: center;
   color: #333;
+  margin-bottom: 20px;
+  animation: pulse 2s infinite;
+}
+
+/* Animación de pulso en el título */
+@keyframes pulse {
+  0% { color: #0078d7; }
+  50% { color: #00c6ff; }
+  100% { color: #0078d7; }
 }
 
 label {
   display: block;
-  margin-top: 10px;
+  margin-top: 12px;
   font-weight: bold;
+  color: #444;
+  transition: color 0.3s ease;
+}
+
+label:hover {
+  color: #0078d7;
 }
 
 input, textarea, select {
   width: 100%;
-  padding: 8px;
-  margin-top: 5px;
+  padding: 10px;
+  margin-top: 6px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
+input:focus, textarea:focus, select:focus {
+  border-color: #0078d7;
+  box-shadow: 0 0 8px rgba(0,120,215,0.4);
+  transform: scale(1.02);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Botones con animación */
 button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #0078d7;
+  margin-top: 18px;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #0078d7, #00c6ff);
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.4s ease;
 }
 
 button:hover {
-  background-color: #005a9e;
+  background: linear-gradient(90deg, #00c6ff, #0078d7);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
-.botones {
-  margin-top: 20px;
+#status-message {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: #0078d7;
+  animation: fadeIn 1s ease;
 }
 
+/* Animación de aparición */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Imagen con animación */
 .animacion {
   width: 100%;
   max-height: 200px;
   object-fit: cover;
   border-radius: 8px;
-  animation: fadeIn 2s ease-in-out;
+  margin-bottom: 20px;
+  animation: zoomIn 1.5s ease;
 }
 
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
 
-#status-message {
-  margin-top: 15px;
-  font-weight: bold;
-}
