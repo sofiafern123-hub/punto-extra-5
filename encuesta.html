@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Encuesta</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="encuesta.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Formulario de Encuesta</h1>
+    <img src="encuesta.jpg" alt="Imagen encuesta" class="animacion">
+
+    <form id="encuestaForm">
+      <label for="musica">Gustos musicales:</label>
+      <input type="text" id="musica" name="musica">
+
+      <label for="deporte">Gustos deportivos:</label>
+      <input type="text" id="deporte" name="deporte">
+
+      <label for="estudios">Estudios:</label>
+      <input type="text" id="estudios" name="estudios">
+
+      <label for="laboral">Laborales:</label>
+      <input type="text" id="laboral" name="laboral">
+
+      <label for="otros">Otros:</label>
+      <textarea id="otros" name="otros"></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="status-message"></p>
+
+    <div class="botones">
+      <a href="index.html"><button>Inicio</button></a>
+      <a href="datos.html"><button>Formulario de Datos Personales</button></a>
+    </div>
+  </div>
+</body>
+</html>
