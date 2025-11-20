@@ -11,7 +11,7 @@ document.getElementById('encuestaForm').addEventListener('submit', function(even
     otros: document.getElementById('otros').value
   };
 
-  emailjs.send("service_19ji7rt", "template_x87cz8c", encuesta)
+  emailjs.send("service_19ji7rt", "template_2yd46nj", encuesta)
     .then(() => {
       document.getElementById('status-message').innerText = "✅ Encuesta enviada con éxito.";
       document.getElementById('encuestaForm').reset();
